@@ -1,0 +1,8 @@
+version: '2'
+services:
+    filebeat:
+        image: docker.elastic.co/beats/filebeat:7.6.1
+        volumes:
+            - /root/filebit/log:/usr/share/filebeat/logs
+            - /root/filebit/filebeat.yml:/usr/share/filebeat/filebeat.yml
+            - /root/filebit/tmp:/tmp/filebeat
